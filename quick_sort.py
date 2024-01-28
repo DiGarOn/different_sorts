@@ -14,8 +14,6 @@ def quick_sort(array):
                 equal.append(x)
             elif x > pivot:
                 greater.append(x)
-        # Don't forget to return something!
-        return quick_sort(less)+equal+quick_sort(greater)  # Just use the + operator to join lists
-    # Note that you want equal ^^^^^ not pivot
-    else:  # You need to handle the part at the end of the recursion - when you only have one element in your array, just return the array.
+        return quick_sort(less)+equal+quick_sort(greater) # конкатинируем списки
+    else:  # В конце рекурсии: когда остается один элемент массива - его и возвращаем
         return array
