@@ -7,6 +7,7 @@
 # https://www.kaggle.com/datasets/chrico03/art-garfunkels-library?resource=download
 import pandas as pd
 import time
+import matplotlib.pyplot as plt
 
 from bubble_sort import my_bubblesort
 from heap_sort import heapSort
@@ -207,6 +208,7 @@ for (i, mas) in enumerate(mass):
         for elem in tmp:
             f.write(f'{elem.author} {elem.book} {elem.year} {elem.pages}\n')
 print(bubble_times)
+plt.plot(x, bubble_times)
 
 # пирамидальная сортировка
 heap_times = []
@@ -219,6 +221,7 @@ for (i, mas) in enumerate(mass):
         for elem in tmp:
             f.write(f'{elem.author} {elem.book} {elem.year} {elem.pages}\n')
 print(heap_times)
+plt.plot(x, heap_times)
 
 # быстрая сортировка
 quick_times = []
@@ -231,4 +234,7 @@ for (i, mas) in enumerate(mass):
         for elem in tmp:
             f.write(f'{elem.author} {elem.book} {elem.year} {elem.pages}\n')
 print(quick_times)
+plt.plot(x, quick_times)
+plt.legend(('bubble', 'heap', 'quick'))
+plt.show()
 
