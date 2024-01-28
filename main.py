@@ -13,40 +13,40 @@ from bubble_sort import my_bubblesort
 from heap_sort import heapSort
 from quick_sort import quick_sort
 
-# df = pd.read_csv('Art Garfunkel Library.csv') # dataset No 1
+df = pd.read_csv('Art Garfunkel Library.csv') # dataset No 1
 
-# df_1 = df[:100]
-# df_1 = df_1.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_1)) # 100
-# df_1.to_csv("data_1.csv")
-# df_2 = df[100:220]
-# df_2 = df_2.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_2)) # 120
-# df_2.to_csv("data_2.csv")
-# df_3 = df[220:350]
-# df_3 = df_3.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_3)) # 130
-# df_3.to_csv("data_3.csv")
-# df_4 = df[350:490]
-# df_4 = df_4.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_4)) # 140
-# df_4.to_csv("data_4.csv")
-# df_5 = df[490:640]
-# df_5 = df_5.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_5)) # 150
-# df_5.to_csv("data_5.csv")
-# df_6 = df[640:800]
-# df_6 = df_6.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_6)) # 160
-# df_6.to_csv("data_6.csv")
-# df_7 = df[800:970]
-# df_7 = df_7.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_7)) # 170
-# df_7.to_csv("data_7.csv")
-# df_8 = df[970:1150]
-# df_8 = df_8.drop(["Date Read", "Favorite"], axis=1)
-# print(len(df_8)) # 180
-# df_8.to_csv("data_8.csv")
+df_1 = df[:100]
+df_1 = df_1.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_1)) # 100
+df_1.to_csv("data_1.csv")
+df_2 = df[100:220]
+df_2 = df_2.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_2)) # 120
+df_2.to_csv("data_2.csv")
+df_3 = df[220:350]
+df_3 = df_3.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_3)) # 130
+df_3.to_csv("data_3.csv")
+df_4 = df[350:490]
+df_4 = df_4.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_4)) # 140
+df_4.to_csv("data_4.csv")
+df_5 = df[490:640]
+df_5 = df_5.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_5)) # 150
+df_5.to_csv("data_5.csv")
+df_6 = df[640:800]
+df_6 = df_6.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_6)) # 160
+df_6.to_csv("data_6.csv")
+df_7 = df[800:970]
+df_7 = df_7.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_7)) # 170
+df_7.to_csv("data_7.csv")
+df_8 = df[970:1150]
+df_8 = df_8.drop(["Date Read", "Favorite"], axis=1)
+print(len(df_8)) # 180
+df_8.to_csv("data_8.csv")
 
 
 # print(df_7)
