@@ -20,11 +20,11 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Namespaces",
-  3: "Files",
-  4: "Functions",
-  5: "Variables"
+  0: "Указатель",
+  1: "Классы",
+  2: "Пространства имен",
+  3: "Файлы",
+  4: "Функции",
+  5: "Переменные"
 };
 

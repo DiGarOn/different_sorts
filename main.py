@@ -13,6 +13,7 @@ from bubble_sort import my_bubblesort
 from heap_sort import heapSort
 from quick_sort import quick_sort
 
+# @brief скачиваю данные с Kaggle и подготавливаю их для работы, разбивая на разные размеры.
 df = pd.read_csv('Art Garfunkel Library.csv') # dataset No 1
 
 df_1 = df[:100]
@@ -55,14 +56,14 @@ df_8.to_csv("data_8.csv")
 # print(df)
 # for i in df:
 #     print(type(i), i)
-
+# @brief класс нашего объекта. Именно относително него и будут перегружены операторы >, <, >=, <=
 class obj:
     def __init__(self, author:str, book:str, year:int, pages:int):
         self.author = author
         self.book = book
         self.year = year
         self.pages = pages
-
+    # @brief <
     def __lt__(self, other): # <
         if self.author < other.author:
             return True
@@ -78,7 +79,7 @@ class obj:
                     return True
                 else:
                     return False
-
+    # @brief <=
     def __le__(self, other): # <=
         if self.author < other.author:
             return True
@@ -96,7 +97,7 @@ class obj:
                     return False
                 else:
                     return True
-
+    # @brief >
     def __gt__(self, other): # >
         if self.author > other.author:
             return True
@@ -112,7 +113,7 @@ class obj:
                     return True
                 else:
                     return False
-
+    # @brief >=
     def __ge__(self, other): # >=
         if self.author > other.author:
             return True
@@ -134,7 +135,7 @@ class obj:
 # a = obj("b",'c',2,1)
 # b = obj("b",'b',2,1)
 # print(a>=b)
-
+# @brief тут я готовлю массивы данных, чтобы отправлять их в функции сортировки, как и требуется в задании
 df_1 = pd.read_csv('data_1.csv')
 mas_1 = []
 l = len(df_1)
@@ -192,12 +193,13 @@ for i in range(l):
 # print(len(mas_8))
 
 mass = [mas_1, mas_2, mas_3, mas_4, mas_5, mas_6, mas_7, mas_8]
+# @brief Формирую, так же, координаты по х для графиков: размеры массивов
 x = []
 for i in mass:
     x.append(len(i))
 print(x)
 
-# сортировка пузырьком
+# @brief сортировка пузырьком
 bubble_times = []
 for (i, mas) in enumerate(mass):
     tmp = mas[:]
@@ -210,7 +212,7 @@ for (i, mas) in enumerate(mass):
 print(bubble_times)
 plt.plot(x, bubble_times)
 
-# пирамидальная сортировка
+# @brief пирамидальная сортировка
 heap_times = []
 for (i, mas) in enumerate(mass):
     tmp = mas[:]
@@ -223,7 +225,7 @@ for (i, mas) in enumerate(mass):
 print(heap_times)
 plt.plot(x, heap_times)
 
-# быстрая сортировка
+# @brief быстрая сортировка
 quick_times = []
 for (i, mas) in enumerate(mass):
     tmp = mas[:]
@@ -235,6 +237,7 @@ for (i, mas) in enumerate(mass):
             f.write(f'{elem.author} {elem.book} {elem.year} {elem.pages}\n')
 print(quick_times)
 plt.plot(x, quick_times)
+# @brief отрисовка графиков
 plt.legend(('bubble', 'heap', 'quick'))
 plt.show()
 
