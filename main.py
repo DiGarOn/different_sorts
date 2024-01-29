@@ -131,7 +131,7 @@ class obj:
                     return False
                 else:
                     return True
-
+    # @brief ==
     def __eq__(self, other): # ==
         if self.author != other.author:
             return False
