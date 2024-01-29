@@ -132,6 +132,16 @@ class obj:
                 else:
                     return True
 
+    def __eq__(self, other): # ==
+        if self.author != other.author:
+            return False
+        if self.book != other.book:
+            return False
+        if self.year != other.year:
+            return False
+        return True
+
+
 # a = obj("b",'c',2,1)
 # b = obj("b",'b',2,1)
 # print(a>=b)
